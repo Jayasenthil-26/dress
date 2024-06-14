@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTRA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="/home-product">Home</a></p>
+            <p class="navbar-link"><a href="/collection-product">Collection</a></p>
+            <p class="navbar-link"><a href="/contact-product">Contact</a></p>
+        </div>
+        <div class="navbar-menu-taggle" style="cursor: pointer;">
+            <i onclick="sideopennav()">☰</i>
+        </div>
+    </nav>
+<!-- side-navbar -->
+
+    <div class="side-navbar">
+        
+        <h1 class="symbol" onclick="sideclosenav()">×</h1>
+        
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="/home-product">Home</a></p>
+            <p class="side-navbar-link"><a href="/collection-product">Collection</a></p>
+            <p class="side-navbar-link"><a href="/contact-product">Contact</a></p>
+        </div>
+    </div>
+
+<div class="container">
+    <h2>Contact Us</h2>
+    <form class="form-head" action="/contact-product" method="post">
+    <div class="form-group">
+        <label class="form-label" for="name">Name:</label>
+        <input type="text" id="name">
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="email">Email:</label>
+        <input type="email" id="email">
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="message">Message:</label>
+        <input type="text" id="message">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+    </div>
+
+     <!-- footer -->
+
+     <div class="footer">
+        <div class="inside-footer">
+        <h3>Nostra</h3>
+        <p>The standard chunk of Lorem ipsum used since the 1500s is reproduced below for the those interest</p>
+        <i>☺ ♣ ♥</i>
+        <p>@2023 Nostra.com</p>
+        </div>
+    </div>
+    
+    <script>
+        var sidenavbar = document.querySelector(".side-navbar")
+
+function sideopennav()
+{
+    sidenavbar.style.left = "0";
+}
+
+function sideclosenav(){
+    sidenavbar.style.left= "-60%"
+}
+    </script>
+
+    </body>
+    </html>
+
+    

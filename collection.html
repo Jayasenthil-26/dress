@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTRA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="/home-product">Home</a></p>
+            <p class="navbar-link"><a href="/collection-product">Collection</a></p>
+            <p class="navbar-link"><a href="/contact-product">Contact</a></p>
+        </div>
+        <div class="navbar-menu-taggle" style="cursor: pointer;">
+            <i onclick="sideopennav()">☰</i>
+        </div>
+    </nav>
+<!-- side-navbar -->
+
+    <div class="side-navbar">
+        
+        <h1 class="symbol" onclick="sideclosenav()">×</h1>
+        
+
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="/home-product">Home</a></p>
+            <p class="side-navbar-link"><a href="/collection-product">Collection</a></p>
+            <p class="side-navbar-link"><a href="/contact-product">Contact</a></p>
+        </div>
+    </div>
+
+<!-- product -->
+      <div class="product-sections">
+        <form class="product-search">
+            <input type="text" id="search" placeholder="search">
+            <i><img width="20px" height="20px" src="search-icon.png" alt=""></i>
+        </form>
+ 
+        <div class="products" id="product">
+            <div class="products-box">
+                <img class="wshirt" width="200px" height="200px" src="shirt.img" alt="">
+                <p>White shirt</p>
+            </div>
+            <div class="products-box">
+                <img class="yshirt" width="200px" height="200px" src="yellow shirt.img" alt="">
+                <p>Yellow shirt</p>
+            </div>
+            <div class="products-box">
+                <img class="gshirt" width="200px" height="200px" src="green shirt.img" alt="">
+                <p>Green shirt</p>
+            </div>
+            <div class="products-box">
+                <img class="rshirt" width="200px" height="200px" src="red shirt.img" alt="">
+                <p>Red shirt</p>
+            </div>
+            <div class="products-box">
+                <img class="wshirt" width="200px" height="200px" src="shirt.img" alt="">
+                <p>White shirt</p>
+            </div>
+            <div class="products-box">
+                <img class="yshirt" width="200px" height="200px" src="yellow shirt.img" alt="">
+                <p>Yellow shirt</p>
+            </div>
+            <div class="products-box">
+                <img class="gshirt" width="200px" height="200px" src="green shirt.img" alt="">
+                <p>Green shirt</p>
+            </div>
+            <div class="products-box">
+                <img class="rshirt" width="200px" height="200px" src="red shirt.img" alt="">
+                <p>Red shirt</p>
+            </div>
+        </div>
+      </div>
+
+
+<!-- footer -->
+    <div class="footer">
+        <div class="inside-footer">
+        <h3>Nostra</h3>
+        <p>The standard chunk of Lorem ipsum used since the 1500s is reproduced below for the those interest</p>
+        <i>☺ ♣ ♥</i>
+        <p>@2023 Nostra.com</p>
+        </div>
+    </div>
+
+    <script>
+        var sidenavbar = document.querySelector(".side-navbar")
+
+function sideopennav()
+{
+    sidenavbar.style.left = "0";
+}
+
+function sideclosenav(){
+    sidenavbar.style.left= "-60%"
+}
+
+var productContainer = document.getElementById("product")
+var search  = document.getElementById('search')
+var productlist = productContainer.querySelectorAll("div")
+
+search.addEventListener("keyup",function(){
+    var enteredvalue = event.target.value.toUpperCase()
+
+    for(count=0; count<productlist.length; count=count+1)
+        {
+            var productname = productlist[count].querySelector("p").textContent
+
+            if(productname.toUpperCase().indexOf(enteredvalue)<0)
+                {
+                    productlist[count].style.display = "none"
+                }
+                else{
+                    productlist[count].style.display = "block"
+                }
+        }
+
+})
+    </script>
+
+</body>
+</html>
